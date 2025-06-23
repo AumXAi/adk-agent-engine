@@ -1,14 +1,10 @@
 import os
-
 import vertexai
 from dotenv import load_dotenv
 from vertexai import agent_engines
-
-
 def cleanup_deployment():
     """Clean up any failed deployments."""
     load_dotenv()
-
     project_id = os.getenv("GOOGLE_CLOUD_PROJECT")
     location = os.getenv("GOOGLE_CLOUD_LOCATION")
     bucket = os.getenv("GOOGLE_CLOUD_STAGING_BUCKET")
@@ -29,7 +25,6 @@ def cleanup_deployment():
         location=location,
         staging_bucket=bucket,
     )
-
     try:
         # Try to get all deployments
         deployments = agent_engines.list()

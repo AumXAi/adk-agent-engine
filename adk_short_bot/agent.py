@@ -1,8 +1,6 @@
 from google.adk.agents import Agent
-
 from adk_short_bot.prompt import ROOT_AGENT_INSTRUCTION
 from adk_short_bot.tools import count_characters
-
 root_agent = Agent(
     name="adk_short_bot",
     model="gemini-2.0-flash",

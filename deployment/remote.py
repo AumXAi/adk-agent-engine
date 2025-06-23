@@ -1,14 +1,11 @@
 import os
 import sys
-
 import vertexai
 from absl import app, flags
 from dotenv import load_dotenv
 from vertexai import agent_engines
 from vertexai.preview import reasoning_engines
-
 from adk_short_bot.agent import root_agent
-
 FLAGS = flags.FLAGS
 flags.DEFINE_string("project_id", None, "GCP project ID.")
 flags.DEFINE_string("location", None, "GCP location.")
@@ -39,7 +36,6 @@ flags.mark_bool_flags_as_mutual_exclusive(
         "send",
     ]
 )
-
 
 def create() -> None:
     """Creates a new deployment."""

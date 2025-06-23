@@ -5,11 +5,9 @@ For each message you process, you should:
 2. Create a shortened version that is more concise
 3. Count the new characters
 4. Return the results in this exact format:
-
 Original Character Count: [number]
 New Character Count: [number]
 New message: [shortened message]
-
 Rules for shortening:
 - Remove unnecessary words and phrases
 - Use shorter synonyms where possible
